@@ -7,12 +7,12 @@ class ModelWarehouse
     public static function mdlShowWarehouse($table, $item, $value)
     {
         if ($item != null && $value != null) {
-            $stmt = Connection::connect()->prepare("SELECT almacen.idTipoDoc,codigo,nombre,razonSocial,jurisdiccion,direccion,repreLegal,oficina, telefono,estado,idAlmacen,NroDoc, (SELECT abrev FROM tipo_documento WHERE idTipoDoc=almacen.idTipoDoc) as tipoDoc FROM $table WHERE $item = :$item");
+            $stmt = Connection::connect()->prepare("SELECT $table.idTipoDoc,codigo,nombre,razonSocial,jurisdiccion,direccion,repreLegal,oficina, telefono,estado,idAlmacen,NroDoc, (SELECT abrev FROM tipo_documento WHERE idTipoDoc=$table.idTipoDoc) as tipoDoc FROM $table WHERE $item = :$item");
             $stmt->bindParam(":" . $item, $value, PDO::PARAM_INT);
             $stmt->execute();
             return $stmt->fetch();
         } else {
-            $stmt = Connection::connect()->prepare("SELECT almacen.idTipoDoc,codigo,nombre,razonSocial,jurisdiccion,direccion,repreLegal,oficina, telefono,estado,idAlmacen,NroDoc, (SELECT abrev FROM tipo_documento WHERE idTipoDoc=almacen.idTipoDoc) as tipoDoc FROM $table");
+            $stmt = Connection::connect()->prepare("SELECT $table.idTipoDoc,codigo,nombre,razonSocial,jurisdiccion,direccion,repreLegal,oficina, telefono,estado,idAlmacen,NroDoc, (SELECT abrev FROM tipo_documento WHERE idTipoDoc=$table.idTipoDoc) as tipoDoc FROM $table");
             $stmt->execute();
             return $stmt->fetchAll();
         }

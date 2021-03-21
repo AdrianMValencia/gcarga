@@ -22,11 +22,11 @@ class TableCustomsBroker
             "data":[';
         foreach ($response as $key => $value) {
             if ($value["estado"] == "DESHABILITADO") {
-                $state = "<button class='btn btn-dark btn-sm btnChangeState' stateCustomsBroker='HABILITADO' codeCustomsBroker='" . $value["codigo"] . "'>DESHABILITADO</button>";
+                $state = "<button class='btn btn-dark btn-sm btnChangeState' stateCustomsBroker='HABILITADO' idAgteCB='" . $value["idAgte"] . "'>DESHABILITADO</button>";
             } else {
-                $state = "<button class='btn btn-info btn-sm btnChangeState' stateCustomsBroker='DESHABILITADO' codeCustomsBroker='" . $value["codigo"] . "'>HABILITADO</button>";
+                $state = "<button class='btn btn-success btn-sm btnChangeState' stateCustomsBroker='DESHABILITADO' idAgteCB='" . $value["idAgte"] . "'>HABILITADO</button>";
             }
-            $buttons = "<div class='btn-group'><button class='btn btn-warning btn-sm editCustomsBroker' data-toggle='modal' data-target='#modalEditCustomsBroker' codeCustomsBrokerEdit='" . $value["codigo"] . "'><i class='fas fa-pencil-alt text-white'></i></button><button class='btn btn-danger btn-sm deleteCustomsBroker' codeCustomsBrokerDelete='" . $value["codigo"] . "'><i class='fas fa-trash-alt'></i></button></div>";
+            $buttons = "<div class='btn-group'><button class='btn btn-warning btn-sm editCustomsBroker' data-toggle='modal' data-target='#modalEditCustomsBroker' idAgte='" . $value["idAgte"] . "'><i class='fas fa-pencil-alt text-white'></i></button><button class='btn btn-danger btn-sm deleteCustomsBroker' idAgte='" . $value["idAgte"] . "'><i class='fas fa-trash-alt'></i></button></div>";
             $dataJson .= '
                     [
                         "' . $buttons . '",

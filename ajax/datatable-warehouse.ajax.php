@@ -24,7 +24,7 @@ class TableWarehouse
             if ($value["estado"] == "DESHABILITADO") {
                 $state = "<button class='btn btn-dark btn-sm btnChangeState' stateWarehouse='HABILITADO' codeWarehouse='" . $value["codigo"] . "'>DESHABILITADO</button>";
             } else {
-                $state = "<button class='btn btn-info btn-sm btnChangeState' stateWarehouse='DESHABILITADO' codeWarehouse='" . $value["codigo"] . "'>HABILITADO</button>";
+                $state = "<button class='btn btn-success btn-sm btnChangeState' stateWarehouse='DESHABILITADO' codeWarehouse='" . $value["codigo"] . "'>HABILITADO</button>";
             }
             $buttons = "<div class='btn-group'><button class='btn btn-warning btn-sm editWarehouse' data-toggle='modal' data-target='#modalEditWarehouse' codeWarehouseEdit='" . $value["codigo"] . "'><i class='fas fa-pencil-alt text-white'></i></button><button class='btn btn-danger btn-sm deleteWarehouse' codeWarehouseDelete='" . $value["codigo"] . "'><i class='fas fa-trash-alt'></i></button></div>";
             $dataJson .= '

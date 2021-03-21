@@ -32,7 +32,7 @@
     <script src="public/js/plugins/jquery.inputmask.bundle.min.js"></script>
 </head>
 
-<body class="hold-transition sidebar-collapse sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
     <div class="wrapper">
         <?php
         include "pages/modules/header.php";
@@ -52,7 +52,7 @@
         }
         include "pages/modules/footer.php";
         ?>
-    </div>
+    <!-- </div> -->
     <script src="public/js/main.js"></script>
     <script src="public/js/warehouse.js"></script>
     <script src="public/js/customs-broker.js"></script>

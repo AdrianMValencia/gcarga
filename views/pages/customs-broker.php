@@ -23,8 +23,8 @@
                 </button>
             </div>
             <div class="card-body">
-                <table class="table table-bordered table-striped dt-responsive tableCustomsBroker" width="100%">
-                    <thead>
+                <table class="table dt-responsive tableCustomsBroker" width="100%">
+                    <thead class="table-dark">
                         <tr>
                             <th>Acciones</th>
                             <th>Código</th>
@@ -127,6 +127,99 @@
                 <?php
                 $registerCustomsBroker = new ControllerCustomsBroker();
                 $registerCustomsBroker->ctrCreateCustomsBroker();
+                ?>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalEditCustomsBroker">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="POST">
+                <div class="modal-header bg-primary">
+                    <h4 class="modal-title">Actualizar Agente de Aduana</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="idAgte" id="idAgte">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-code"></i>
+                            </span>
+                        </div>
+                        <input type="number" class="form-control" name="editCode" min="1" placeholder="código" value style="text-transform:uppercase;" required>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-pencil-alt"></i>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" name="editBusinessName" placeholder="Razón Social" value style="text-transform:uppercase;" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-address-card"></i>
+                                        </span>
+                                        <select class="form-control" name="editDoc" required style="width: 100%;">
+                                            <option id="editDocOptionCB"></option>
+                                            <option hidden>Seleccionar Doc ...</option>
+                                            <?php
+                                            $documentType = ControllerDocumentType::ctrShowDocumentType();
+                                            ?>
+                                            <?php foreach ($documentType as $key => $value) : ?>
+                                                <option value="<?php echo $value["idTipoDoc"]; ?>"><?php echo $value["abrev"]; ?></option>
+                                            <?php endforeach ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-hashtag"></i>
+                                        </span>
+                                    </div>
+                                    <input type="number" class="form-control" name="editNroDoc" placeholder="Nro de Doc." value style="text-transform:uppercase;" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-file-alt"></i>
+                                    </span>
+                                    <select class="form-control select2" name="editCodeJurisdiction" id="editCodeJurisdictionOption" style="width: 100%;" required>
+                                        <?php
+                                        $codeJurisdiction = ControllerJurisdiction::ctrShowCodeJurisdiction();
+                                        ?>
+                                        <?php foreach ($codeJurisdiction as $key => $value) : ?>
+                                            <option value="<?php echo $value["jurisdic"]; ?>"><?php echo $value["jurisdic"]; ?></option>
+                                        <?php endforeach ?>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Salir</button>
+                    <button type="submit" class="btn btn-success">Guardar cambios</button>
+                </div>
+                <?php
+                $editCustomsBroker = new ControllerCustomsBroker();
+                $editCustomsBroker->ctrEditCustomsBroker();
                 ?>
             </form>
         </div>

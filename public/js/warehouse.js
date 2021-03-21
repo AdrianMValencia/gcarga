@@ -77,12 +77,12 @@ $(document).on("click", ".btnChangeState", function () {
     success: function (response) {
       if (response == "ok") {
         if (stateWarehouse == "DESHABILITADO") {
-          $(button).removeClass("btn-info");
+          $(button).removeClass("btn-success");
           $(button).addClass("btn-dark");
           $(button).html("DESHABILITADO");
           $(button).attr("stateWarehouse", "HABILITADO");
         } else {
-          $(button).addClass("btn-info");
+          $(button).addClass("btn-success");
           $(button).removeClass("btn-dark");
           $(button).html("HABILITADO");
           $(button).attr("stateWarehouse", "DESHABILITADO");
