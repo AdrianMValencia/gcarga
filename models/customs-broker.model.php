@@ -71,4 +71,17 @@ class ModelCustomsBroker
         $stmt->close();
         $stmt = null;
     }
+
+    public static function mdlDeleteCustomsBroker($table, $idAgteDelete)
+    {
+        $stmt = Connection::connect()->prepare("DELETE FROM $table WHERE idAgte = :idAgte");
+        $stmt->bindParam(":idAgte", $idAgteDelete, PDO::PARAM_INT);
+        if ($stmt->execute()) {
+            return "ok";
+        } else {
+            print_r(Connection::connect()->errorInfo());
+        }
+        $stmt->close();
+        $stmt = null;
+    }
 }

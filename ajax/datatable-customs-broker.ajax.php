@@ -26,7 +26,7 @@ class TableCustomsBroker
             } else {
                 $state = "<button class='btn btn-success btn-sm btnChangeState' stateCustomsBroker='DESHABILITADO' idAgteCB='" . $value["idAgte"] . "'>HABILITADO</button>";
             }
-            $buttons = "<div class='btn-group'><button class='btn btn-warning btn-sm editCustomsBroker' data-toggle='modal' data-target='#modalEditCustomsBroker' idAgte='" . $value["idAgte"] . "'><i class='fas fa-pencil-alt text-white'></i></button><button class='btn btn-danger btn-sm deleteCustomsBroker' idAgte='" . $value["idAgte"] . "'><i class='fas fa-trash-alt'></i></button></div>";
+            $buttons = "<div class='btn-group'><button class='btn btn-warning btn-sm editCustomsBroker' data-toggle='modal' data-target='#modalEditCustomsBroker' idAgte='" . $value["idAgte"] . "'><i class='fas fa-pencil-alt text-white'></i></button><button class='btn btn-danger btn-sm deleteCustomsBroker' idAgteDelete='" . $value["idAgte"] . "'><i class='fas fa-trash-alt'></i></button></div>";
             $dataJson .= '
                     [
                         "' . $buttons . '",

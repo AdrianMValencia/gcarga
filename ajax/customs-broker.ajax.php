@@ -27,6 +27,13 @@ class AjaxCustomsBroker
         $response = ModelCustomsBroker::mdlChangeStateCustomsBroker($table, $item1, $value1, $item2, $value2);
         echo $response;
     }
+
+    public $idAgteDelete;
+    public function ajaxDeleteCustomsBroker()
+    {
+        $response = ControllerCustomsBroker::ctrDeleteCustomsBroker($this->idAgteDelete);
+        echo $response;
+    }
 }
 if (isset($_POST["idAgte"])) {
     $editCustomsBroker = new AjaxCustomsBroker();
@@ -38,4 +45,9 @@ if (isset($_POST["stateCustomsBroker"])) {
     $changeState->idAgteCB = $_POST["idAgteCB"];
     $changeState->stateCustomsBroker = $_POST["stateCustomsBroker"];
     $changeState->ajaxChangeState();
+}
+if (isset($_POST["idAgteDelete"])) {
+    $deleteCustomsBroker = new AjaxCustomsBroker();
+    $deleteCustomsBroker->idAgteDelete = $_POST["idAgteDelete"];
+    $deleteCustomsBroker->ajaxDeleteCustomsBroker();
 }

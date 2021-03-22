@@ -88,3 +88,44 @@ $(document).on("click", ".btnChangeState", function () {
     },
   });
 });
+
+$(document).on("click", ".deleteCustomsBroker", function(){
+  var idAgteDelete = $(this).attr("idAgteDelete");
+  Swal.fire({
+    icon: "warning",
+    title: "¿Estás seguro(a) de eliminar el agente de aduana?",
+    text: "¡Si no lo estás puedes cancelar la acción!",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    cancelButtonText: "Cancelar",
+    confirmButtonText: "Eliminar",
+  }).then(function (result) {
+    if (result.value) {
+      var data = new FormData();
+      data.append("idAgteDelete", idAgteDelete);
+      $.ajax({
+        url: "ajax/customs-broker.ajax.php",
+        method: "POST",
+        data: data,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(response){
+          Swal.fire({
+            icon: "success",
+            title: "¡Correcto!",
+            text: "¡El agente de aduana ha sido eliminado correctamente!",
+            showConfirmButton: true,
+            confirmButtonText: "Aceptar",
+            closeOnConfirm: false,
+          }).then((result) => {
+            if (result.value) {
+              window.location = "customs-broker";
+            }
+          });
+        }
+      })
+    }
+  })
+})

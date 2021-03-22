@@ -118,4 +118,10 @@ class ControllerCustomsBroker
             }
         }
     }
+
+    public static function ctrDeleteCustomsBroker($idAgteDelete){
+        $table = "agente_aduana";
+        $response = ModelCustomsBroker::mdlDeleteCustomsBroker($table, $idAgteDelete);
+        return $response;
+    }
 }
