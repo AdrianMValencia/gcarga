@@ -57,4 +57,18 @@ class ModelCustomsBroker
         $stmt->close();
         $stmt = null;
     }
+
+    public static function mdlChangeStateCustomsBroker($table, $item1, $value1, $item2, $value2)
+    {
+        $stmt = Connection::connect()->prepare("UPDATE $table SET $item2 = :$item2 WHERE $item1 = :$item1");
+        $stmt->bindParam(":" . $item2, $value2, PDO::PARAM_STR);
+        $stmt->bindParam(":" . $item1, $value1, PDO::PARAM_INT);
+        if ($stmt->execute()) {
+            return "ok";
+        } else {
+            print_r(Connection::connect()->errorInfo());
+        }
+        $stmt->close();
+        $stmt = null;
+    }
 }

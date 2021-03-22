@@ -65,7 +65,7 @@ class ModelWarehouse
         $stmt = null;
     }
 
-    public static function mdlChangeState($table, $item1, $value1, $item2, $value2)
+    public static function mdlChangeStateWarehouse($table, $item1, $value1, $item2, $value2)
     {
         $stmt = Connection::connect()->prepare("UPDATE $table SET $item2 = :$item2 WHERE $item1 = :$item1");
         $stmt->bindParam(":" . $item2, $value2, PDO::PARAM_STR);

@@ -56,3 +56,35 @@ $(document).on("click", ".editCustomsBroker", function () {
     },
   });
 });
+
+$(document).on("click", ".btnChangeState", function () {
+  var idAgteCB = $(this).attr("idAgteCB");
+  var stateCustomsBroker = $(this).attr("stateCustomsBroker");
+  var button = $(this);
+  var data = new FormData();
+  data.append("idAgteCB", idAgteCB);
+  data.append("stateCustomsBroker", stateCustomsBroker);
+  $.ajax({
+    url: "ajax/customs-broker.ajax.php",
+    method: "POST",
+    data: data,
+    cache: false,
+    contentType: false,
+    processData: false,
+    success: function (response) {
+      if (response == "ok") {
+        if (stateCustomsBroker == "DESHABILITADO") {
+          $(button).removeClass("btn-success");
+          $(button).addClass("btn-dark");
+          $(button).html("DESHABILITADO");
+          $(button).attr("stateCustomsBroker", "HABILITADO");
+        } else {
+          $(button).addClass("btn-success");
+          $(button).removeClass("btn-dark");
+          $(button).html("HABILITADO");
+          $(button).attr("stateCustomsBroker", "DESHABILITADO");
+        }
+      }
+    },
+  });
+});

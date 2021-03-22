@@ -24,7 +24,7 @@ class AjaxWarehouse
         $value1 = $this->codeWarehouseChange;
         $item2 = "estado";
         $value2 = $this->stateWarehouseChange;
-        $response = ModelWarehouse::mdlChangeState($table, $item1, $value1, $item2, $value2);
+        $response = ModelWarehouse::mdlChangeStateWarehouse($table, $item1, $value1, $item2, $value2);
         echo $response;
     }
 
