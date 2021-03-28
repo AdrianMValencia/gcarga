@@ -47,7 +47,7 @@
     </section>
 </div>
 <div class="modal fade" id="modalAddWarehouse">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <form method="POST">
                 <div class="modal-header bg-primary">
@@ -55,46 +55,56 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fas fa-code"></i>
-                            </span>
-                        </div>
-                        <input type="number" class="form-control" name="addCode" id="addCode" min="1" placeholder="código" style="text-transform:uppercase;" required>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fas fa-pencil-alt"></i>
-                            </span>
-                        </div>
-                        <input type="text" class="form-control" name="addName" placeholder="nombre" style="text-transform:uppercase;" required>
-                    </div>
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-md-6">
                             <div class="form-group">
-                                <div class="input-group">
+                                <label>Código</label>
+                                <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
-                                            <i class="fas fa-address-card"></i>
+                                            <i class="fas fa-code"></i>
                                         </span>
-                                        <select class="form-control" name="addDoc" required>
-                                            <option selected="">Seleccionar Doc ...</option>
-                                            <?php
-                                            $documentType = ControllerDocumentType::ctrShowDocumentType();
-                                            ?>
-                                            <?php foreach ($documentType as $key => $value) : ?>
-                                                <option value="<?php echo $value["idTipoDoc"]; ?>"><?php echo $value["abrev"]; ?></option>
-                                            <?php endforeach ?>
-                                        </select>
                                     </div>
+                                    <input type="number" class="form-control" name="addCode" id="addCode" min="1" placeholder="código" style="text-transform:uppercase;" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Nombre</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" name="addName" placeholder="nombre" style="text-transform:uppercase;" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Tipo de Doc.</label>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-address-card"></i>
+                                    </span>
+                                    <select class="form-control" name="addDoc" style="width: 100%;" required>
+                                        <option selected="">Seleccionar Doc ...</option>
+                                        <?php
+                                        $documentType = ControllerDocumentType::ctrShowDocumentType();
+                                        ?>
+                                        <?php foreach ($documentType as $key => $value) : ?>
+                                            <option value="<?php echo $value["idTipoDoc"]; ?>"><?php echo $value["abrev"]; ?></option>
+                                        <?php endforeach ?>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <div class="input-group">
+                                <label>Número de Doc.</label>
+                                <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="fas fa-hashtag"></i>
@@ -104,66 +114,92 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fas fa-pencil-alt"></i>
-                            </span>
-                        </div>
-                        <input type="text" class="form-control" name="addBusinessName" placeholder="Razón Social" style="text-transform:uppercase;" required>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-lg-6">
                             <div class="form-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <i class="fas fa-file-alt"></i>
-                                    </span>
-                                    <select class="form-control select2" name="addJurisdiction" style="width: 100%;" required>
-                                        <option value="">Seleccionar Jurisdicción ...</option>
-                                        <?php
-                                        $jurisdiction = ControllerJurisdiction::ctrShowJurisdiction();
-                                        ?>
-                                        <?php foreach ($jurisdiction as $key => $value) : ?>
-                                            <option value="<?php echo $value["jurisdiccion"]; ?>"><?php echo $value["jurisdiccion"]; ?></option>
-                                        <?php endforeach ?>
-                                    </select>
+                                <label>Razón Social</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" name="addBusinessName" placeholder="Razón Social" style="text-transform:uppercase;" required>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </span>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label>Jurisdicción</label>
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-file-alt"></i>
+                                        </span>
+                                        <select class="form-control select2" name="addJurisdiction" style="width: 100%;" required>
+                                            <option value="">Seleccionar Jurisdicción ...</option>
+                                            <?php
+                                            $jurisdiction = ControllerJurisdiction::ctrShowJurisdiction();
+                                            ?>
+                                            <?php foreach ($jurisdiction as $key => $value) : ?>
+                                                <option value="<?php echo $value["jurisdiccion"]; ?>"><?php echo $value["jurisdiccion"]; ?></option>
+                                            <?php endforeach ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <input type="text" class="form-control" name="addAddress" placeholder="Dirección" style="text-transform:uppercase;" required>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fas fa-file-contract"></i>
-                            </span>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Dirección</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" name="addAddress" placeholder="Dirección" style="text-transform:uppercase;" required>
+                                </div>
+                            </div>
                         </div>
-                        <input type="text" class="form-control" name="addRepreLegal" placeholder="Repre. Legal" style="text-transform:uppercase;" required>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fas fa-laptop"></i>
-                            </span>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Repre. Legal</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-file-contract"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" name="addRepreLegal" placeholder="Repre. Legal" style="text-transform:uppercase;" required>
+                                </div>
+                            </div>
                         </div>
-                        <input type="text" class="form-control" name="addOffice" placeholder="Oficina" style="text-transform:uppercase;" required>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fas fa-phone"></i>
-                            </span>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Oficina</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-laptop"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" name="addOffice" placeholder="Oficina" style="text-transform:uppercase;" required>
+                                </div>
+                            </div>
                         </div>
-                        <input type="text" class="form-control" name="addPhone" placeholder="teléfono" style="text-transform:uppercase;" required>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Teléfono</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-phone"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" name="addPhone" placeholder="teléfono" style="text-transform:uppercase;" required>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer d-flex justify-content-between">
@@ -179,7 +215,7 @@
     </div>
 </div>
 <div class="modal fade" id="modalEditWarehouse">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <form method="POST">
                 <div class="modal-header bg-primary">
@@ -187,46 +223,56 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fas fa-code"></i>
-                            </span>
-                        </div>
-                        <input type="number" class="form-control" name="editCode" placeholder="código" value readonly style="text-transform:uppercase;" required>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fas fa-pencil-alt"></i>
-                            </span>
-                        </div>
-                        <input type="text" class="form-control" name="editName" placeholder="nombre" value style="text-transform:uppercase;" required>
-                    </div>
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-md-6">
                             <div class="form-group">
-                                <div class="input-group">
+                                <label>Código</label>
+                                <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
-                                            <i class="fas fa-address-card"></i>
+                                            <i class="fas fa-code"></i>
                                         </span>
-                                        <select class="form-control" name="editDoc" required style="width: 100%;">
-                                            <option id="editDocOption"></option>
-                                            <option hidden>Seleccionar Doc ...</option>
-                                            <?php
-                                            $documentType = ControllerDocumentType::ctrShowDocumentType();
-                                            ?>
-                                            <?php foreach ($documentType as $key => $value) : ?>
-                                                <option value="<?php echo $value["idTipoDoc"]; ?>"><?php echo $value["abrev"]; ?></option>
-                                            <?php endforeach ?>
-                                        </select>
                                     </div>
+                                    <input type="number" class="form-control" name="editCode" placeholder="código" value readonly style="text-transform:uppercase;" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Nombre</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" name="editName" placeholder="nombre" value style="text-transform:uppercase;" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Tipo de Doc.</label>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-address-card"></i>
+                                    </span>
+                                    <select class="form-control" name="editDoc" style="width: 100%;" required>
+                                        <option id="editDocOption"></option>
+                                        <option hidden>Seleccionar Doc ...</option>
+                                        <?php
+                                        $documentType = ControllerDocumentType::ctrShowDocumentType();
+                                        ?>
+                                        <?php foreach ($documentType as $key => $value) : ?>
+                                            <option value="<?php echo $value["idTipoDoc"]; ?>"><?php echo $value["abrev"]; ?></option>
+                                        <?php endforeach ?>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
+                                <label>Número de Doc.</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
@@ -237,18 +283,22 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fas fa-pencil-alt"></i>
-                            </span>
-                        </div>
-                        <input type="text" class="form-control" name="editBusinessName" placeholder="Razón Social" value style="text-transform:uppercase;" required>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <div class="form-group">
+                                <label>Razón Social</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" name="editBusinessName" placeholder="Razón Social" value style="text-transform:uppercase;" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Jurisdicción</label>
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">
                                         <i class="fas fa-file-alt"></i>
@@ -264,38 +314,58 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </span>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Dirección</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" name="editAddress" placeholder="Dirección" value style="text-transform:uppercase;" required>
+                                </div>
+                            </div>
                         </div>
-                        <input type="text" class="form-control" name="editAddress" placeholder="Dirección" value style="text-transform:uppercase;" required>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fas fa-file-contract"></i>
-                            </span>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Repre. Legal</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-file-contract"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" name="editRepreLegal" placeholder="Repre. Legal" value style="text-transform:uppercase;" required>
+                                </div>
+                            </div>
                         </div>
-                        <input type="text" class="form-control" name="editRepreLegal" placeholder="Repre. Legal" value style="text-transform:uppercase;" required>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fas fa-laptop"></i>
-                            </span>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Oficina</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-laptop"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" name="editOffice" placeholder="Oficina" value style="text-transform:uppercase;" required>
+                                </div>
+                            </div>
                         </div>
-                        <input type="text" class="form-control" name="editOffice" placeholder="Oficina" value style="text-transform:uppercase;" required>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fas fa-phone"></i>
-                            </span>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Teléfono</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-phone"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" name="editPhone" placeholder="teléfono" value style="text-transform:uppercase;" required>
+                                </div>
+                            </div>
                         </div>
-                        <input type="text" class="form-control" name="editPhone" placeholder="teléfono" value style="text-transform:uppercase;" required>
                     </div>
                 </div>
                 <div class="modal-footer d-flex justify-content-between">

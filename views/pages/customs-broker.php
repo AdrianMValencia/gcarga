@@ -49,6 +49,7 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
+                    <label>Código</label>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">
@@ -57,6 +58,7 @@
                         </div>
                         <input type="number" class="form-control" name="addCode" id="addCode" min="1" placeholder="código" style="text-transform:uppercase;" required>
                     </div>
+                    <label>Razón Social</label>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">
@@ -68,26 +70,26 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">
-                                            <i class="fas fa-address-card"></i>
-                                        </span>
-                                        <select class="form-control" name="addDoc" required>
-                                            <option selected="">Seleccionar Doc ...</option>
-                                            <?php
-                                            $documentType = ControllerDocumentType::ctrShowDocumentType();
-                                            ?>
-                                            <?php foreach ($documentType as $key => $value) : ?>
-                                                <option value="<?php echo $value["idTipoDoc"]; ?>"><?php echo $value["abrev"]; ?></option>
-                                            <?php endforeach ?>
-                                        </select>
-                                    </div>
+                                <label>Tipo de Doc.</label>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-address-card"></i>
+                                    </span>
+                                    <select class="form-control" name="addDoc" style="width: 100%;" required>
+                                        <option selected="">Seleccionar Doc ...</option>
+                                        <?php
+                                        $documentType = ControllerDocumentType::ctrShowDocumentType();
+                                        ?>
+                                        <?php foreach ($documentType as $key => $value) : ?>
+                                            <option value="<?php echo $value["idTipoDoc"]; ?>"><?php echo $value["abrev"]; ?></option>
+                                        <?php endforeach ?>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
+                                <label>Número de Doc.</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
@@ -102,6 +104,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
+                                <label>Jurisdicción</label>
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">
                                         <i class="fas fa-file-alt"></i>
@@ -142,6 +145,7 @@
                 </div>
                 <div class="modal-body">
                     <input type="hidden" name="idAgte" id="idAgte">
+                    <label>Código</label>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">
@@ -150,6 +154,7 @@
                         </div>
                         <input type="number" class="form-control" name="editCode" min="1" placeholder="código" value style="text-transform:uppercase;" required>
                     </div>
+                    <label>Razón Social</label>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">
@@ -161,27 +166,27 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">
-                                            <i class="fas fa-address-card"></i>
-                                        </span>
-                                        <select class="form-control" name="editDoc" required style="width: 100%;">
-                                            <option id="editDocOptionCB"></option>
-                                            <option hidden>Seleccionar Doc ...</option>
-                                            <?php
-                                            $documentType = ControllerDocumentType::ctrShowDocumentType();
-                                            ?>
-                                            <?php foreach ($documentType as $key => $value) : ?>
-                                                <option value="<?php echo $value["idTipoDoc"]; ?>"><?php echo $value["abrev"]; ?></option>
-                                            <?php endforeach ?>
-                                        </select>
-                                    </div>
+                                <label>Tipo de Doc.</label>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-address-card"></i>
+                                    </span>
+                                    <select class="form-control" name="editDoc" style="width: 100%;" required>
+                                        <option id="editDocOptionCB"></option>
+                                        <option hidden>Seleccionar Doc ...</option>
+                                        <?php
+                                        $documentType = ControllerDocumentType::ctrShowDocumentType();
+                                        ?>
+                                        <?php foreach ($documentType as $key => $value) : ?>
+                                            <option value="<?php echo $value["idTipoDoc"]; ?>"><?php echo $value["abrev"]; ?></option>
+                                        <?php endforeach ?>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
+                                <label>Número de Doc.</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
@@ -196,6 +201,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
+                                <label>Jurisdicción</label>
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">
                                         <i class="fas fa-file-alt"></i>
