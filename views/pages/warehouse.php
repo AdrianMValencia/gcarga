@@ -207,8 +207,8 @@
                     <button type="submit" class="btn btn-success">Guardar</button>
                 </div>
                 <?php
-                $registerWarehouse = new ControllerWarehouse();
-                $registerWarehouse->ctrCreateWarehouse();
+                $createWarehouse = new ControllerWarehouse();
+                $createWarehouse->ctrCreateWarehouse();
                 ?>
             </form>
         </div>

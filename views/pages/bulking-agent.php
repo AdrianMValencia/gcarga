@@ -167,8 +167,8 @@
                     <button type="submit" class="btn btn-success">Guardar</button>
                 </div>
                 <?php
-                $registerBulkingAgent = new ControllerBulkingAgent();
-                $registerBulkingAgent->ctrCreateBulkingAgent();
+                $createBulkingAgent = new ControllerBulkingAgent();
+                $createBulkingAgent->ctrCreateBulkingAgent();
                 ?>
             </form>
         </div>

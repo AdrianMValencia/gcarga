@@ -128,8 +128,8 @@
                     <button type="submit" class="btn btn-success">Guardar</button>
                 </div>
                 <?php
-                $registerCustomsBroker = new ControllerCustomsBroker();
-                $registerCustomsBroker->ctrCreateCustomsBroker();
+                $createCustomsBroker = new ControllerCustomsBroker();
+                $createCustomsBroker->ctrCreateCustomsBroker();
                 ?>
             </form>
         </div>
