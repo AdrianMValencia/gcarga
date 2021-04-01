@@ -46,8 +46,7 @@ $(document).on("click", ".editCustomsBroker", function () {
       $('input[name="idAgte"]').val(response["idAgte"]);
       $('input[name="editCode"]').val(response["codigo"]);
       $('input[name="editBusinessName"]').val(response["razonSocial"]);
-      $("#editDocOptionCB").val(response["idTipoDoc"]);
-      $("#editDocOptionCB").html(response["tipoDoc"]);
+      $("#editDocOptionCB").val(response["idTipoDoc"]).trigger("change");
       $('input[name="editNroDoc"]').val(response["NroDoc"]);
       $("#editCodeJurisdictionOption")
         .val(response["jurisdic"])
@@ -89,7 +88,7 @@ $(document).on("click", ".btnChangeState", function () {
   });
 });
 
-$(document).on("click", ".deleteCustomsBroker", function(){
+$(document).on("click", ".deleteCustomsBroker", function () {
   var idAgteDelete = $(this).attr("idAgteDelete");
   Swal.fire({
     icon: "warning",
@@ -111,7 +110,7 @@ $(document).on("click", ".deleteCustomsBroker", function(){
         cache: false,
         contentType: false,
         processData: false,
-        success: function(response){
+        success: function (response) {
           Swal.fire({
             icon: "success",
             title: "¡Correcto!",
@@ -124,8 +123,8 @@ $(document).on("click", ".deleteCustomsBroker", function(){
               window.location = "customs-broker";
             }
           });
-        }
-      })
+        },
+      });
     }
-  })
-})
+  });
+});

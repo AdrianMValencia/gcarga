@@ -45,8 +45,7 @@ $(document).on("click", ".editWarehouse", function () {
     success: function (response) {
       $('input[name="editCode"]').val(response["codigo"]);
       $('input[name="editName"]').val(response["nombre"]);
-      $("#editDocOption").val(response["idTipoDoc"]);
-      $("#editDocOption").html(response["tipoDoc"]);
+      $("#editDocOption").val(response["idTipoDoc"]).trigger("change");
       $('input[name="editNroDoc"]').val(response["NroDoc"]);
       $('input[name="editBusinessName"]').val(response["razonSocial"]);
       $("#editJurisdictionOption")

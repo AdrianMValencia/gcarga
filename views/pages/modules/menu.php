@@ -80,7 +80,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="bulking-agent" class="nav-link">
                                         <i class="nav-icon fas fa-truck-loading"></i>
                                         <p>Agente de Carga</p>
                                     </a>

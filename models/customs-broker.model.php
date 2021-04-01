@@ -24,9 +24,9 @@ class ModelCustomsBroker
     {
         $stmt = Connection::connect()->prepare("INSERT INTO $table(codigo,NroDoc,razonSocial,codJurisdic,jurisdiccion,estado,idTipoDoc) VALUES(:codigo,:NroDoc,:razonSocial,:codJurisdic,:jurisdiccion,:estado,:idTipoDoc)");
         $stmt->bindParam(":codigo", $data["codigo"], PDO::PARAM_INT);
-        $stmt->bindParam(":NroDoc", $data["NroDoc"], PDO::PARAM_STR);
+        $stmt->bindParam(":NroDoc", $data["NroDoc"], PDO::PARAM_INT);
         $stmt->bindParam(":razonSocial", $data["razonSocial"], PDO::PARAM_STR);
-        $stmt->bindParam(":codJurisdic", $data["codJurisdic"], PDO::PARAM_STR);
+        $stmt->bindParam(":codJurisdic", $data["codJurisdic"], PDO::PARAM_INT);
         $stmt->bindParam(":jurisdiccion", $data["jurisdiccion"], PDO::PARAM_STR);
         $stmt->bindParam(":estado", $data["estado"], PDO::PARAM_STR);
         $stmt->bindParam(":idTipoDoc", $data["idTipoDoc"], PDO::PARAM_INT);
@@ -43,9 +43,9 @@ class ModelCustomsBroker
     {
         $stmt = Connection::connect()->prepare("UPDATE $table SET codigo = :codigo, NroDoc = :NroDoc, razonSocial = :razonSocial, codJurisdic = :codJurisdic, jurisdiccion = :jurisdiccion, idTipoDoc = :idTipoDoc WHERE idAgte = :idAgte");
         $stmt->bindParam(":codigo", $data["codigo"], PDO::PARAM_INT);
-        $stmt->bindParam(":NroDoc", $data["NroDoc"], PDO::PARAM_STR);
+        $stmt->bindParam(":NroDoc", $data["NroDoc"], PDO::PARAM_INT);
         $stmt->bindParam(":razonSocial", $data["razonSocial"], PDO::PARAM_STR);
-        $stmt->bindParam(":codJurisdic", $data["codJurisdic"], PDO::PARAM_STR);
+        $stmt->bindParam(":codJurisdic", $data["codJurisdic"], PDO::PARAM_INT);
         $stmt->bindParam(":jurisdiccion", $data["jurisdiccion"], PDO::PARAM_STR);
         $stmt->bindParam(":idTipoDoc", $data["idTipoDoc"], PDO::PARAM_INT);
         $stmt->bindParam(":idAgte", $data["idAgte"], PDO::PARAM_INT);

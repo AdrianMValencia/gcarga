@@ -89,8 +89,8 @@
                                     <span class="input-group-text">
                                         <i class="fas fa-address-card"></i>
                                     </span>
-                                    <select class="form-control" name="addDoc" style="width: 100%;" required>
-                                        <option selected="">Seleccionar Doc ...</option>
+                                    <select class="form-control select2" name="addDoc" style="width: 100%;" required>
+                                        <option selected="">SELECCIONAR DOC ...</option>
                                         <?php
                                         $documentType = ControllerDocumentType::ctrShowDocumentType();
                                         ?>
@@ -136,7 +136,7 @@
                                             <i class="fas fa-file-alt"></i>
                                         </span>
                                         <select class="form-control select2" name="addJurisdiction" style="width: 100%;" required>
-                                            <option value="">Seleccionar Jurisdicción ...</option>
+                                            <option value="">SELECCIONAR JURISDICCIÓN ...</option>
                                             <?php
                                             $jurisdiction = ControllerJurisdiction::ctrShowJurisdiction();
                                             ?>
@@ -257,9 +257,7 @@
                                     <span class="input-group-text">
                                         <i class="fas fa-address-card"></i>
                                     </span>
-                                    <select class="form-control" name="editDoc" style="width: 100%;" required>
-                                        <option id="editDocOption"></option>
-                                        <option hidden>Seleccionar Doc ...</option>
+                                    <select class="form-control select2" name="editDoc" id="editDocOption" style="width: 100%;" required>
                                         <?php
                                         $documentType = ControllerDocumentType::ctrShowDocumentType();
                                         ?>
