@@ -42,7 +42,8 @@
                 $_GET["page"] == "start" ||
                 $_GET["page"] == "warehouse" ||
                 $_GET["page"] == "customs-broker" ||
-                $_GET["page"] == "bulking-agent"
+                $_GET["page"] == "bulking-agent" ||
+                $_GET["page"] == "foreign-agent"
             ) {
                 include "pages/" . $_GET["page"] . ".php";
             } else {
@@ -53,10 +54,11 @@
         }
         include "pages/modules/footer.php";
         ?>
-    <script src="public/js/main.js"></script>
-    <script src="public/js/warehouse.js"></script>
-    <script src="public/js/customs-broker.js"></script>
-    <script src="public/js/bulking-agent.js"></script>
+        <script src="public/js/main.js"></script>
+        <script src="public/js/warehouse.js"></script>
+        <script src="public/js/customs-broker.js"></script>
+        <script src="public/js/bulking-agent.js"></script>
+        <script src="public/js/foreign-agent.js"></script>
 </body>
 
 </html>

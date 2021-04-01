@@ -4,7 +4,7 @@ require_once "../controllers/bulking-agent.controller.php";
 
 require_once "../models/bulking-agent.model.php";
 
-class TableCustomsBroker
+class TableBulkingAgent
 {
     public function showTable()
     {
@@ -46,5 +46,5 @@ class TableCustomsBroker
     }
 }
 
-$table = new TableCustomsBroker();
+$table = new TableBulkingAgent();
 $table->showTable();
