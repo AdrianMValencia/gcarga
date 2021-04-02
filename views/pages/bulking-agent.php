@@ -73,11 +73,13 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label>Tipo de Doc.</label>
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <i class="fas fa-address-card"></i>
-                                    </span>
-                                    <select class="form-control select2" name="addDoc" style="width: 100%;" required>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-address-card"></i>
+                                        </span>
+                                    </div>
+                                    <select class="form-control select2" name="addDoc" required>
                                         <option selected="">SELECCIONAR DOC ...</option>
                                         <?php
                                         $documentType = ControllerDocumentType::ctrShowDocumentType();
@@ -116,11 +118,13 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Jurisdicción</label>
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <i class="fas fa-file-alt"></i>
-                                    </span>
-                                    <select class="form-control select2" name="addJurisdiction" style="width: 100%;" required>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-file-alt"></i>
+                                        </span>
+                                    </div>
+                                    <select class="form-control select2" name="addJurisdiction" required>
                                         <option value="">SELECCIONAR JURISDICCIÓN ...</option>
                                         <option value="154">154 - MOLLENDO - AGENCIA ADUANERA DE AREQUIPA</option>
                                         <option value="118">118 - MARITIMA DEL CALLAO</option>

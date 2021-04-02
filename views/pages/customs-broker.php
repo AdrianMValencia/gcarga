@@ -71,11 +71,13 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label>Tipo de Doc.</label>
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <i class="fas fa-address-card"></i>
-                                    </span>
-                                    <select class="form-control select2" name="addDoc" style="width: 100%;" required>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-address-card"></i>
+                                        </span>
+                                    </div>
+                                    <select class="form-control select2" name="addDoc" required>
                                         <option selected="">SELECCIONAR DOC ...</option>
                                         <?php
                                         $documentType = ControllerDocumentType::ctrShowDocumentType();
@@ -105,11 +107,13 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Jurisdicción</label>
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <i class="fas fa-file-alt"></i>
-                                    </span>
-                                    <select class="form-control select2" name="addJurisdiction" style="width: 100%;" required>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-file-alt"></i>
+                                        </span>
+                                    </div>
+                                    <select class="form-control select2" name="addJurisdiction" required>
                                         <option value="">SELECCIONAR JURISDICCIÓN ...</option>
                                         <?php
                                         $codeJurisdiction = ControllerJurisdiction::ctrShowCodeJurisdiction();
@@ -167,11 +171,13 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label>Tipo de Doc.</label>
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <i class="fas fa-address-card"></i>
-                                    </span>
-                                    <select class="form-control select2" name="editDoc" id="editDocOptionCB" style="width: 100%;" required>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-address-card"></i>
+                                        </span>
+                                    </div>
+                                    <select class="form-control select2" name="editDoc" id="editDocOptionCB" required>
                                         <?php
                                         $documentType = ControllerDocumentType::ctrShowDocumentType();
                                         ?>
@@ -200,11 +206,13 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>Jurisdicción</label>
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <i class="fas fa-file-alt"></i>
-                                    </span>
-                                    <select class="form-control select2" name="editCodeJurisdiction" id="editCodeJurisdictionOption" style="width: 100%;" required>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-file-alt"></i>
+                                        </span>
+                                    </div>
+                                    <select class="form-control select2" name="editCodeJurisdiction" id="editCodeJurisdictionOption" required>
                                         <?php
                                         $codeJurisdiction = ControllerJurisdiction::ctrShowCodeJurisdiction();
                                         ?>

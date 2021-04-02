@@ -85,11 +85,13 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Tipo de Doc.</label>
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <i class="fas fa-address-card"></i>
-                                    </span>
-                                    <select class="form-control select2" name="addDoc" style="width: 100%;" required>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-address-card"></i>
+                                        </span>
+                                    </div>
+                                    <select class="form-control select2" name="addDoc" required>
                                         <option selected="">SELECCIONAR DOC ...</option>
                                         <?php
                                         $documentType = ControllerDocumentType::ctrShowDocumentType();
@@ -129,22 +131,22 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <div class="form-group">
-                                    <label>Jurisdicción</label>
+                                <label>Jurisdicción</label>
+                                <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="fas fa-file-alt"></i>
                                         </span>
-                                        <select class="form-control select2" name="addJurisdiction" style="width: 100%;" required>
-                                            <option value="">SELECCIONAR JURISDICCIÓN ...</option>
-                                            <?php
-                                            $jurisdiction = ControllerJurisdiction::ctrShowJurisdiction();
-                                            ?>
-                                            <?php foreach ($jurisdiction as $key => $value) : ?>
-                                                <option value="<?php echo $value["jurisdiccion"]; ?>"><?php echo $value["jurisdiccion"]; ?></option>
-                                            <?php endforeach ?>
-                                        </select>
                                     </div>
+                                    <select class="form-control select2" name="addJurisdiction" required>
+                                        <option value="">SELECCIONAR JURISDICCIÓN ...</option>
+                                        <?php
+                                        $jurisdiction = ControllerJurisdiction::ctrShowJurisdiction();
+                                        ?>
+                                        <?php foreach ($jurisdiction as $key => $value) : ?>
+                                            <option value="<?php echo $value["jurisdiccion"]; ?>"><?php echo $value["jurisdiccion"]; ?></option>
+                                        <?php endforeach ?>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -253,11 +255,13 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Tipo de Doc.</label>
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <i class="fas fa-address-card"></i>
-                                    </span>
-                                    <select class="form-control select2" name="editDoc" id="editDocOption" style="width: 100%;" required>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-address-card"></i>
+                                        </span>
+                                    </div>
+                                    <select class="form-control select2" name="editDoc" id="editDocOption" required>
                                         <?php
                                         $documentType = ControllerDocumentType::ctrShowDocumentType();
                                         ?>
@@ -297,11 +301,13 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Jurisdicción</label>
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <i class="fas fa-file-alt"></i>
-                                    </span>
-                                    <select class="form-control select2" name="editJurisdiction" id="editJurisdictionOption" style="width: 100%;" required>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-file-alt"></i>
+                                        </span>
+                                    </div>
+                                    <select class="form-control select2" name="editJurisdiction" id="editJurisdictionOption" required>
                                         <?php
                                         $jurisdiction = ControllerJurisdiction::ctrShowJurisdiction();
                                         ?>
