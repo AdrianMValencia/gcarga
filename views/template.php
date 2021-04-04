@@ -44,7 +44,8 @@
                 $_GET["page"] == "customs-broker" ||
                 $_GET["page"] == "bulking-agent" ||
                 $_GET["page"] == "foreign-agent" ||
-                $_GET["page"] == "shipping-agent"
+                $_GET["page"] == "shipping-agent" ||
+                $_GET["page"] == "carriers"
             ) {
                 include "pages/" . $_GET["page"] . ".php";
             } else {
@@ -61,6 +62,7 @@
         <script src="public/js/bulking-agent.js"></script>
         <script src="public/js/foreign-agent.js"></script>
         <script src="public/js/shipping-agent.js"></script>
+        <script src="public/js/carriers.js"></script>
 </body>
 
 </html>
