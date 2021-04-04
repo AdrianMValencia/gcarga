@@ -23,8 +23,8 @@
                 </button>
             </div>
             <div class="card-body">
-                <table class="table dt-responsive tableBulkingAgent" width="100%">
-                    <thead class="table-dark">
+                <table class="table dt-responsive table-bordered table-striped tableBulkingAgent" width="100%">
+                    <thead>
                         <tr>
                             <th>Acciones</th>
                             <th>Código</th>

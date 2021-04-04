@@ -23,8 +23,8 @@
                 </button>
             </div>
             <div class="card-body">
-                <table class="table dt-responsive tableForeignAgent" width="100%">
-                    <thead class="table-dark">
+                <table class="table dt-responsive table-bordered table-striped tableForeignAgent" width="100%">
+                    <thead>
                         <tr>
                             <th>Acciones</th>
                             <th>Código</th>
