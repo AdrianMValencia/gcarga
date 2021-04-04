@@ -32,7 +32,7 @@
     <script src="public/js/plugins/jquery.inputmask.bundle.min.js"></script>
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed text-sm">
     <div class="wrapper">
         <?php
         include "pages/modules/header.php";
@@ -45,7 +45,8 @@
                 $_GET["page"] == "bulking-agent" ||
                 $_GET["page"] == "foreign-agent" ||
                 $_GET["page"] == "shipping-agent" ||
-                $_GET["page"] == "carriers"
+                $_GET["page"] == "carriers" ||
+                $_GET["page"] == "area"
             ) {
                 include "pages/" . $_GET["page"] . ".php";
             } else {
@@ -63,6 +64,7 @@
         <script src="public/js/foreign-agent.js"></script>
         <script src="public/js/shipping-agent.js"></script>
         <script src="public/js/carriers.js"></script>
+        <script src="public/js/area.js"></script>
 </body>
 
 </html>
