@@ -118,7 +118,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="position" class="nav-link">
                                 <i class="nav-icon fab fa-hackerrank"></i>
                                 <p>Cargo</p>
                             </a>
