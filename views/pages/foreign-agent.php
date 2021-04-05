@@ -17,7 +17,7 @@
     <section class="content">
         <div class="card card-primary card-outline">
             <div class="card-header">
-                <button class="btn btn-primary" data-toggle="modal" data-target="#modalAddForeignAgent">
+                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalAddForeignAgent">
                     <i class="fas fa-plus"></i>
                     Agregar agente del exterior
                 </button>

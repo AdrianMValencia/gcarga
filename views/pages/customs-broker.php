@@ -17,7 +17,7 @@
     <section class="content">
         <div class="card card-primary card-outline">
             <div class="card-header">
-                <button class="btn btn-primary" data-toggle="modal" data-target="#modalAddCustomsBroker">
+                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalAddCustomsBroker">
                     <i class="fas fa-plus"></i>
                     Agregar agente de aduana
                 </button>
