@@ -12,6 +12,7 @@ require_once "controllers/carriers.controller.php";
 require_once "controllers/area.controller.php";
 require_once "controllers/position.controller.php";
 require_once "controllers/employee.controller.php";
+require_once "controllers/users.controller.php";
 
 require_once "models/warehouse.model.php";
 require_once "models/document-type.model.php";
@@ -24,6 +25,7 @@ require_once "models/carriers.model.php";
 require_once "models/area.model.php";
 require_once "models/position.model.php";
 require_once "models/employee.model.php";
+require_once "models/users.model.php";
 
 $template = new ControllerTemplate();
 $template->ctrTemplate();

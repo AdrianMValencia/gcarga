@@ -48,7 +48,8 @@
                 $_GET["page"] == "carriers" ||
                 $_GET["page"] == "area" ||
                 $_GET["page"] == "position" ||
-                $_GET["page"] == "employee"
+                $_GET["page"] == "employee" ||
+                $_GET["page"] == "users"
             ) {
                 include "pages/" . $_GET["page"] . ".php";
             } else {
@@ -69,6 +70,7 @@
         <script src="public/js/area.js"></script>
         <script src="public/js/position.js"></script>
         <script src="public/js/employee.js"></script>
+        <script src="public/js/users.js"></script>
 </body>
 
 </html>
