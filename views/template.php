@@ -49,7 +49,12 @@
                 $_GET["page"] == "area" ||
                 $_GET["page"] == "position" ||
                 $_GET["page"] == "employee" ||
-                $_GET["page"] == "users"
+                $_GET["page"] == "users" ||
+                $_GET["page"] == "concept" ||
+                $_GET["page"] == "port" ||
+                $_GET["page"] == "containers" ||
+                $_GET["page"] == "container-type"
+
             ) {
                 include "pages/" . $_GET["page"] . ".php";
             } else {
@@ -71,6 +76,10 @@
         <script src="public/js/position.js"></script>
         <script src="public/js/employee.js"></script>
         <script src="public/js/users.js"></script>
+        <script src="public/js/concept.js"></script>
+        <script src="public/js/port.js"></script>
+        <script src="public/js/containers.js"></script>
+        <script src="public/js/container-type.js"></script>
 </body>
 
 </html>

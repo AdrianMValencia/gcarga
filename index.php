@@ -13,6 +13,9 @@ require_once "controllers/area.controller.php";
 require_once "controllers/position.controller.php";
 require_once "controllers/employee.controller.php";
 require_once "controllers/users.controller.php";
+require_once "controllers/concept.controller.php";
+require_once "controllers/containers.controller.php";
+require_once "controllers/container-type.controller.php";
 
 require_once "models/warehouse.model.php";
 require_once "models/document-type.model.php";
@@ -26,6 +29,9 @@ require_once "models/area.model.php";
 require_once "models/position.model.php";
 require_once "models/employee.model.php";
 require_once "models/users.model.php";
+require_once "models/concept.model.php";
+require_once "models/containers.model.php";
+require_once "models/container-type.model.php";
 
 $template = new ControllerTemplate();
 $template->ctrTemplate();

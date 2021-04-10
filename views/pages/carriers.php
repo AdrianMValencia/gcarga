@@ -17,8 +17,8 @@
     <section class="content">
         <div class="card card-primary card-outline">
             <div class="card-header">
-                <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modalAddCarriers">
-                    <i class="fas fa-plus"></i>
+                <button class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#modalAddCarriers">
+                    <i class="fas fa-plus-square"></i>
                     Agregar transportistas
                 </button>
             </div>
