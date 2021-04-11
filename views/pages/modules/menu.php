@@ -186,19 +186,19 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="voucher-type" class="nav-link">
                                         <i class="nav-icon fas fa-clipboard-list"></i>
                                         <p>Comprobantes</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="bank-account" class="nav-link">
                                         <i class="nav-icon fas fa-money-check"></i>
                                         <p>Cuentas de banco</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="goods-services" class="nav-link">
                                         <i class="nav-icon fas fa-file-invoice-dollar"></i>
                                         <p>BB y SS</p>
                                     </a>

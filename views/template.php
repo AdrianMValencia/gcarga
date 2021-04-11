@@ -53,7 +53,10 @@
                 $_GET["page"] == "concept" ||
                 $_GET["page"] == "port" ||
                 $_GET["page"] == "containers" ||
-                $_GET["page"] == "container-type"
+                $_GET["page"] == "container-type" ||
+                $_GET["page"] == "voucher-type" ||
+                $_GET["page"] == "bank-account" ||
+                $_GET["page"] == "goods-services"
 
             ) {
                 include "pages/" . $_GET["page"] . ".php";
@@ -80,6 +83,9 @@
         <script src="public/js/port.js"></script>
         <script src="public/js/containers.js"></script>
         <script src="public/js/container-type.js"></script>
+        <script src="public/js/voucher-type.js"></script>
+        <script src="public/js/bank-account.js"></script>
+        <script src="public/js/goods-services.js"></script>
 </body>
 
 </html>
