@@ -212,13 +212,13 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="vendors" class="nav-link">
                                 <i class="nav-icon fas fa-user-friends"></i>
                                 <p>Proveedores</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="customers" class="nav-link">
                                 <i class="nav-icon fas fa-user"></i>
                                 <p>Clientes</p>
                             </a>

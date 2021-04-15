@@ -56,7 +56,9 @@
                 $_GET["page"] == "container-type" ||
                 $_GET["page"] == "voucher-type" ||
                 $_GET["page"] == "bank-account" ||
-                $_GET["page"] == "goods-services"
+                $_GET["page"] == "goods-services" ||
+                $_GET["page"] == "vendors" ||
+                $_GET["page"] == "customers"
 
             ) {
                 include "pages/" . $_GET["page"] . ".php";
@@ -86,6 +88,8 @@
         <script src="public/js/voucher-type.js"></script>
         <script src="public/js/bank-account.js"></script>
         <script src="public/js/goods-services.js"></script>
+        <script src="public/js/vendors.js"></script>
+        <script src="public/js/customers.js"></script>
 </body>
 
 </html>
