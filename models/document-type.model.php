@@ -6,7 +6,7 @@ class ModelDocumentType
 {
     public static function mdlShowDocumentType($table)
     {
-        $stmt = Connection::connect()->prepare("SELECT * FROM tipo_documento");
+        $stmt = Connection::connect()->prepare("SELECT * FROM $table");
         if ($stmt->execute()) {
             return $stmt->fetchAll();
         } else {
